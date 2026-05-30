@@ -1,0 +1,40 @@
+{
+  "id": "com.gelato.torbox.stable",
+  "version": "1.0.0",
+  "name": "Gelato TorBox Stable",
+  "description": "Fully stable Gelato + TorBox build (1080p SDR optimized)",
+  "resources": ["stream"],
+  "types": ["movie", "series"],
+  "idPrefixes": ["tt"],
+  "catalogs": [],
+  "behaviorHints": {
+    "configurable": true
+  },
+
+  "config": {
+    "torboxApiKey": "1b355464-93a6-4b05-ba84-568b7693952c",
+
+    "filters": {
+      "resolution": ["1080p", "720p"],
+      "excludeResolutions": ["2160p", "1440p"],
+
+      "quality": ["WEB-DL", "WEBRip"],
+      "excludeQuality": ["CAM", "TS", "SCR", "REMUX"],
+
+      "audio": ["DD+", "AAC"],
+      "excludeAudio": ["TrueHD", "DTS-HD MA"],
+
+      "size": {
+        "min": 1000,
+        "max": 25000
+      }
+    },
+
+    "performance": {
+      "onlyCached": true,
+      "autoPlay": true,
+      "timeout": 8000,
+      "maxResults": 10
+    }
+  }
+}
